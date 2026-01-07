@@ -1,0 +1,23 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyInterpreterInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="pytest" />
+          <option value="playwright" />
+          <option value="requests" />
+          <option value="python-dotenv" />
+          <option value="setuptools" />
+          <option value="httpx" />
+          <option value="Pillow" />
+          <option value="testit-cli" />
+          <option value="testit-api-client" />
+          <option value="testit-adapter-pytest" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

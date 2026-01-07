@@ -7,7 +7,7 @@ def  open_system(playwright: Playwright) -> Page:
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
     page = context.new_page()
-    page.goto('http://release.goulash.tech/')
+    page.goto('https://k8s-devtest1.goulash.tech/')
 
     page.locator('#LoginForm_username').fill('test')
     page.locator('#LoginForm_password').fill('1')
