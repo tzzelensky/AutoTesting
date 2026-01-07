@@ -1,3 +1,3 @@
-pytest_plugins = {
-    "fixtures.fixture"
-}
+pytest_plugins = [
+    "fixture.fixture"
+]

@@ -22,3 +22,8 @@ def create_promoevent(open_system, playwright: Playwright) -> Page:
     page.locator('#Promoevent_name').fill('Promoevent_name')
     page.locator('#Promoevent_name_site').fill('Promoevent_name_site')
     page.locator('#Promoevent_is_active').click()
+    page.select_option('#Promoevent_usage', '1')
+    page.locator('#Promoevent_description').fill('Promoevent_description')
+    page.locator('#Promoevent__code').fill('AutoTest2121')
+    yield page
+    page.close()
