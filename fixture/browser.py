@@ -36,7 +36,5 @@ def chromium_page_with_state(initialize_browser_state, playwright: Playwright, r
 
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context(storage_state='browser-state.json')
-    context.tracing.start(screenshots=False, snapshots=False, sources=False)
     yield context.new_page()
-    context.tracing.stop(path=f'./tracing/{request.node.name}.zip')
     browser.close()

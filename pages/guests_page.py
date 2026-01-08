@@ -30,3 +30,4 @@ class GuestsPage(BasePage):
         self.guest_profile.click()
         expect(self.title_guest_profile).to_be_visible()
         expect(self.title_guest_profile).to_have_text('Карточка гостя')
+        self.title_guest_profile.wait_for_timeout()
