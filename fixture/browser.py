@@ -1,6 +1,6 @@
 import pytest
 from _pytest.fixtures import SubRequest
-from playwright.sync_api import Page, Playwright, Browser, BrowserContext
+from playwright.sync_api import Page, Playwright
 
 @pytest.fixture
 def chromium_page(playwright: Playwright) -> Page:
