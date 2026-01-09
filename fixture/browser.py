@@ -33,7 +33,6 @@ def initialize_browser_state(playwright: Playwright) -> None:
 @pytest.fixture()
 def chromium_page_with_state(initialize_browser_state, playwright: Playwright, request: SubRequest) -> Page:
     # Фикстуру необходимо передавать в тест
-
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context(storage_state='browser-state.json')
     yield context.new_page()
