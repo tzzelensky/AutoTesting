@@ -1,4 +1,7 @@
-from playwright.sync_api import Page
+import re
+from re import Pattern
+
+from playwright.sync_api import expect
 
 class BasePage:
     def __init__(self, page):
@@ -12,3 +15,7 @@ class BasePage:
 
     def get_by_test_id(self, param):
         pass
+
+    def check_current_url(self, expected_url: Pattern[str]):
+        expect(self.page).to_have_url(expected_url)
+

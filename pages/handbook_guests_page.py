@@ -1,3 +1,5 @@
+from re import Pattern
+
 from playwright.sync_api import Page, expect
 
 from pages.base_page import BasePage
@@ -38,5 +40,4 @@ class GuestbookPage(BasePage):
 
         expect(self.guestbook_find_guest_button).to_be_visible()
         self.guestbook_find_guest_button.click()
-
 
